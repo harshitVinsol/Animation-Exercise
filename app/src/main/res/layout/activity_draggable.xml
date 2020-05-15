@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/comments_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,17 +34,19 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/comments"
-            android:textColor="@color/blue"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/description_layout"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="0dp"
         android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/comments_layout" />
+        app:layout_constraintTop_toBottomOf="@id/comments_layout"/>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
