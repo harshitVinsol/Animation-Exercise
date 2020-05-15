@@ -18,35 +18,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/comments_layout"
+    <TextView
+        android:id="@+id/comments_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_white"
-        android:orientation="vertical"
+        android:background="@drawable/background_white_with_corners"
+        android:padding="10dp"
+        android:text="@string/comments"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="12sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/text_comments"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/comments"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/description_layout"
+        android:id="@+id/layout_description"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/white"
-        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/comments_layout"/>
-
+        app:layout_constraintTop_toBottomOf="@id/comments_text" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

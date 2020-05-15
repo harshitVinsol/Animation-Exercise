@@ -8,38 +8,27 @@
         motion:constraintSetStart="@+id/start_constraint">
         <OnSwipe
             motion:dragDirection="dragUp"
-            motion:touchAnchorId="@+id/comments_layout" />
+            motion:touchAnchorId="@+id/comments_text" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start_constraint">
 
         <Constraint
-            android:id="@+id/text_comments"
+            android:id="@+id/comments_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
             <CustomAttribute
                 app:attributeName="textColor"
-                app:customColorValue="@color/black" />
+                app:customColorValue="@color/blue" />
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="12" />
+            <CustomAttribute
+                app:attributeName="textStyle"
+                app:customStringValue="normal" />
         </Constraint>
-
-        <Constraint
-            android:id="@+id/comments_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
-
-        <Constraint
-            android:id="@+id/description_layout"
-            android:layout_width="match_parent"
-            android:layout_height="800dp"
-            android:background="@color/white"
-            android:orientation="vertical"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toBottomOf="@id/comments_layout" />
 
     </ConstraintSet>
 
@@ -48,33 +37,23 @@
         motion:deriveConstraintsFrom="@+id/start_constraint">
 
         <Constraint
-            android:id="@+id/comments_layout"
+            android:id="@+id/comments_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="60dp"
-            android:background="@drawable/background_white"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-
-        <Constraint
-            android:id="@+id/description_layout"
-            android:layout_width="match_parent"
-            android:layout_height="800dp"
-            android:background="@color/white"
-            android:orientation="vertical"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toBottomOf="@id/comments_layout" />
-
-        <Constraint
-            android:id="@+id/text_comments"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            motion:layout_constraintTop_toTopOf="parent">
             <CustomAttribute
                 app:attributeName="textColor"
-                app:customColorValue="@color/blue" />
+                app:customColorValue="@color/black" />
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="20" />
+            <CustomAttribute
+                app:attributeName="textStyle"
+                app:customStringValue="bold" />
         </Constraint>
+
     </ConstraintSet>
 
 </MotionScene>
